@@ -1,93 +1,149 @@
 # NFL Game Prediction Model 🏈
 
-A machine learning project to predict NFL game outcomes using historical data and advanced analytics.
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![CI](https://github.com/yourusername/nfl-prediction/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/nfl-prediction/actions/workflows/ci.yml)
 
-## 🎯 Project Overview
+## 📋 Overview
 
-This project aims to build a robust prediction model for NFL games by analyzing historical game data, team statistics, and various performance metrics. The model uses multiple data sources and machine learning techniques to provide accurate game predictions.
+A machine learning project for predicting NFL game outcomes using historical data, advanced statistics, and various ML algorithms. This project implements a comprehensive data pipeline from collection to deployment.
 
-## 📊 Features
+## 🎯 Project Goals
 
-- Historical NFL game data collection and processing
-- Advanced feature engineering for team performance metrics
-- Multiple ML models for prediction (planned)
-- Comprehensive evaluation metrics
-- Visualization of predictions and model performance
+- Develop accurate NFL game outcome predictions
+- Create a robust data pipeline for sports analytics
+- Implement multiple ML models and ensemble methods
+- Provide interpretable insights for predictions
+- Deploy as an accessible API service
 
-## 🚀 Quick Start
+## 🏗️ Project Structure
+
+```
+nfl-prediction/
+├── src/                    # Source code
+│   ├── data/              # Data collection and processing
+│   ├── features/          # Feature engineering
+│   ├── models/            # Model implementations
+│   ├── utils/             # Utility functions
+│   └── visualization/     # Plotting and analysis
+├── tests/                  # Test suite
+│   ├── unit/              # Unit tests
+│   └── integration/       # Integration tests
+├── notebooks/             # Jupyter notebooks for EDA
+├── docs/                  # Documentation
+├── config/                # Configuration files
+├── scripts/               # Utility scripts
+└── data/                  # Data directory (not tracked)
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.8+
-- pip or conda for package management
+- Python 3.9+
+- pip or conda
+- Git
 
 ### Installation
 
+1. Clone the repository:
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/NFL_prediction_model.git
-cd NFL_prediction_model
+git clone https://github.com/yourusername/nfl-prediction.git
+cd nfl-prediction
+```
 
-# Create virtual environment
+2. Create a virtual environment:
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-# Install dependencies
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
+pip install -r requirements-dev.txt  # For development
 ```
 
-## 📁 Project Structure
+4. Set up configuration:
+```bash
+cp config/config.example.yml config/config.yml
+# Edit config.yml with your settings
+```
 
+## 📊 Data Sources
+
+The project uses multiple data sources for comprehensive analysis:
+
+- **Historical Game Data**: Team statistics, scores, and outcomes
+- **Player Statistics**: Individual performance metrics
+- **Weather Data**: Game-time conditions
+- **Injury Reports**: Player availability and health status
+- **Betting Lines**: Market expectations and odds
+
+See [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md) for detailed information.
+
+## 🧪 Testing
+
+Run the test suite:
+```bash
+# All tests
+pytest
+
+# With coverage
+pytest --cov=src --cov-report=html
+
+# Specific test file
+pytest tests/unit/test_data_loader.py
 ```
-NFL_prediction_model/
-├── data/               # Data directory
-│   ├── raw/           # Raw data files
-│   ├── processed/     # Cleaned and processed data
-│   └── external/      # External data sources
-├── src/               # Source code
-│   ├── data/         # Data collection and processing
-│   ├── features/     # Feature engineering
-│   ├── models/       # ML models
-│   └── visualization/# Visualization utilities
-├── notebooks/         # Jupyter notebooks for exploration
-├── tests/            # Unit tests
-├── docs/             # Documentation
-└── configs/          # Configuration files
-```
+
+## 📈 Model Performance
+
+Current model performance metrics:
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|--------|----------|
+| Baseline | TBD | TBD | TBD | TBD |
+| Random Forest | TBD | TBD | TBD | TBD |
+| XGBoost | TBD | TBD | TBD | TBD |
+| Neural Network | TBD | TBD | TBD | TBD |
+| Ensemble | TBD | TBD | TBD | TBD |
 
 ## 🔧 Development
 
-This project follows best practices for ML development:
+### Setting up pre-commit hooks
+```bash
+pre-commit install
+```
 
-- Modular code structure
-- Comprehensive testing
-- CI/CD pipeline with GitHub Actions
-- Detailed documentation
+### Running code quality checks
+```bash
+# Linting
+flake8 src/ tests/
 
-## 📈 Current Status
+# Type checking
+mypy src/
 
-🚧 **Work in Progress** - Initial development phase
+# Code formatting
+black src/ tests/
+```
 
-### Completed
-- [x] Project structure setup
-- [x] Initial repository configuration
+## 📝 Contributing
 
-### In Progress
-- [ ] Data collection pipeline
-- [ ] Feature engineering
-- [ ] Model development
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## 🤝 Contributing
+## 📄 License
 
-Contributions are welcome! Please read our contributing guidelines before submitting PRs.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📝 License
+## 🤝 Acknowledgments
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+- NFL for providing game data
+- Open-source community for amazing ML libraries
+- Contributors and reviewers
 
-## 📧 Contact
+## 📮 Contact
 
-For questions or feedback, please open an issue on GitHub.
+For questions or suggestions, please open an issue or contact [your-email@example.com](mailto:your-email@example.com).
 
 ---
-*Built with ❤️ for NFL analytics enthusiasts*
+*This project is for educational and research purposes only.*
