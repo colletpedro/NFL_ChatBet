@@ -48,8 +48,8 @@ nfl-prediction/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/nfl-prediction.git
-cd nfl-prediction
+git clone https://github.com/colletpedro/NFL_ChatBet.git
+cd NFL_ChatBet
 ```
 
 2. Create a virtual environment:
@@ -68,6 +68,23 @@ pip install -r requirements-dev.txt  # For development
 ```bash
 cp config/config.example.yml config/config.yml
 # Edit config.yml with your settings
+```
+
+### Quick Start
+
+1. **Run the data pipeline example:**
+```bash
+python scripts/example_data_pipeline.py
+```
+
+2. **Train models:**
+```bash
+python scripts/train_model.py --models random_forest xgboost
+```
+
+3. **Explore data with Jupyter:**
+```bash
+jupyter notebook notebooks/01_exploratory_data_analysis.ipynb
 ```
 
 ## 📊 Data Sources
